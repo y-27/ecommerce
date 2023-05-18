@@ -1,0 +1,23 @@
+{% extends 'seller/master.html' %}
+{% load static %}
+{% block title %} catalogue {% endblock %}
+{% block header %}
+{% endblock %}
+{% block content %}
+<div class="row">
+    {% for product in products %}
+    <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="{{ product.image.url }}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h3>name : {{ product.product_name }}</h3>
+            <h6>description:{{ product.description }}</h6>
+            <h6>stock:{{ product.stock }}</h6>
+            <h6>price:{{ product.price }}</h6>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

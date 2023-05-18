@@ -1,0 +1,36 @@
+{% extends 'customer/customer_master.html' %}
+{% load static %}
+{% block title %} customer_home {% endblock %}
+{% block header %}
+<style>
+
+</style>
+{% endblock %}
+{% block content %}
+
+
+
+<div class="container">
+
+
+  <div class="row" style="margin-top: 5%;">
+    {% for product in products %}
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <img src="{{ product.image.url }}" class="card-img-top" alt="..." width="300%" height="500%">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.product_name }}</h5>
+          <p class="price">{{ product.price }}</p>
+          <p>{{ product.description }}</p>
+          
+          <p class="card-text"></p>
+      
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+
+
+    {% endblock %}
+    Thanks, I'll check them out.Got it, thanks!Thanks a lot.

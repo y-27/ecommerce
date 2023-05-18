@@ -1,0 +1,68 @@
+{% extends 'customer/customer_master.html' %}
+{% load static %}
+{% block title %} my_cart {% endblock %}
+{% block header %}
+<style>
+.product-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+}
+
+.product-title {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.product-price {
+  font-size: 16px;
+  color: #888;
+}
+
+.add-to-cart {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
+  background-color: #0056b3;
+}
+
+</style>
+{% endblock %}
+{% block content %}
+
+<section>
+    <div class="product-card" style="width: 25%;">
+        <img src="{% static 'images/nike.jpg' %}" alt="Product Image" width="100%">
+        <h2 class="product-title">Product Name</h2>
+        <p class="product-price">$99.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+
+      <div class="product-card" style="width: 25%;" >
+        <img src="{% static 'images/mixer.jpg' %}" alt="Product Image" width="90%">
+        <h2 class="product-title">Product Name</h2>
+        <p class="product-price">$99.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="product-card" style="width: 25%;">
+        <img src="{% static 'images/saree.jpg' %}" alt="Product Image" width="90%">
+        <h2 class="product-title">Product Name</h2>
+        <p class="product-price">$99.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      
+</section>
+
+
+
+
+{% endblock %}

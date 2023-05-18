@@ -1,0 +1,73 @@
+{% extends "common/master.html" %}
+{% load static %}
+{% block header %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+
+
+<section>
+  <div class="container">
+
+
+  <div class="row" style="margin-top: 5%;">
+
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'images/adminz .png' %}" class="card-img-top" alt="..." width="300%" height="500%">
+        <div class="card-body">
+          <h5 class="card-title">Admin</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="{% url 'common:adminlogin' %}" class="btn btn-primary">login</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-4">
+
+
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'images/seller.jpg' %}" class="card-img-top" alt="..." width="300%" height="500%">
+        <div class="card-body">
+          <h5 class="card-title">Seller</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="{% url 'common:sellerlogin' %}" class="btn btn-primary">login</a>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'images/custo.jpg' %}" class="card-img-top" alt="..." width="300%" height="700%">
+        <div class="card-body">
+          <h5 class="card-title">Customer</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="{% url 'common:customerlogin' %}" class="btn btn-primary">login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+{% endblock %}
